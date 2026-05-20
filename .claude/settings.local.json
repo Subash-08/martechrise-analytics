@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($html = Get-Content \"$env:TEMP\\\\prismo.html\" -Raw; @\\('.framer-1x4obda', '.framer-17kxx9d', '.framer-1ylgfzm', '.framer-1qe0b3t'\\) | ForEach-Object { $class = $_; if \\($html -match \"\\(?s\\)\\\\$class\\\\{[^}]+\\\\}\"\\) { Write-Output \"$class`: $\\($Matches[0]\\)\" } })"
+    ]
+  }
+}
