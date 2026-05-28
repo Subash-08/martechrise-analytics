@@ -29,4 +29,4 @@
 - [ ] **Global Search**: Search across projects, categories, and users.
 - [ ] **Dark Mode Toggle**: User-controlled theme switching.
 - [ ] **API Documentation**: Swagger/OpenAPI for external integrations.
-- [ ] **Testing**: Unit and E2E tests with Jest/Playwright.
+- [ ] **Testing**: Unit and E2E tests with Jest/Playwright..
