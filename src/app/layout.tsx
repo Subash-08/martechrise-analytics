@@ -21,7 +21,8 @@ export const metadata: Metadata = {
     },
     description: siteConfig.seo.defaultDescription,
     icons: {
-        icon: '/favicon.ico',
+        icon: '/icon.png',
+        apple: '/icon.png',
     },
 };
 

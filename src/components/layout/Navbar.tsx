@@ -30,23 +30,22 @@ const Navbar: React.FC = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                scrolled
-                    ? 'py-4 glass border-b border-slate-100 shadow-sm'
-                    : 'py-6 bg-transparent'
-            }`}
+            className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${scrolled
+                ? 'py-4 glass border-b border-slate-100 shadow-sm'
+                : 'py-4'
+                }`}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center">
                     <Image
-                        src="https://res.cloudinary.com/dyu26qawq/image/upload/v1779116371/logo_oxyjsb.jpg"
-                        alt="MartechRise Logo"
-                        width={180}
-                        height={60}
+                        src="/assets/logo.png"
+                        alt="MarTechRise Logo"
+                        width={200}
+                        height={70}
                         priority
-                        className="h-12 w-auto object-contain"
+                        className="h-14 w-auto object-contain"
                     />
                 </Link>
 
@@ -56,11 +55,10 @@ const Navbar: React.FC = () => {
                         <div key={link.name} className="relative group text-left">
                             <Link
                                 href={link.path}
-                                className={`text-sm font-semibold tracking-tight transition-all hover:text-indigo-600 ${
-                                    pathname === link.path
-                                        ? 'text-indigo-600'
-                                        : 'text-slate-600'
-                                }`}
+                                className={`text-sm font-semibold tracking-tight transition-all hover:text-indigo-600 ${pathname === link.path
+                                    ? 'text-indigo-600'
+                                    : 'text-slate-600'
+                                    }`}
                             >
                                 {link.name}
                             </Link>

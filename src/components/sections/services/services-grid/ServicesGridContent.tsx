@@ -96,11 +96,7 @@ export default function ServicesGridContent({ services }: Props) {
                     ))}
                   </ul>
 
-                  <div className="mt-8">
-                    <Link href="/case-studies" className="block text-center w-full px-6 py-3 rounded-xl bg-slate-50 hover:bg-indigo-50 text-indigo-600 font-semibold transition-all duration-300 border border-slate-200 hover:border-indigo-200">
-                      Learn More
-                    </Link>
-                  </div>
+        
                 </div>
               </ServicesGridAnimation>
             );

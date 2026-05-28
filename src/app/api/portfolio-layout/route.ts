@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import connectToDB from '@/lib/db';
 import PortfolioLayoutBox from '@/models/PortfolioLayoutBox';
 import Project from '@/models/Project';
+import Category from '@/models/Category';
 
 // Types for the sanitized response
 interface SanitizedProject {
@@ -22,12 +23,17 @@ export async function GET() {
     try {
         await connectToDB();
 
+        // Ensure models are registered
+        Project.init();
+        Category.init();
+
         // Fetch all boxes sorted by order
         const boxes = await PortfolioLayoutBox.find()
             .sort({ order: 1 })
             .populate({
                 path: 'projectId',
-                populate: { path: 'categoryId' } // Allow WorkCard to show category name
+                strictPopulate: false,
+                populate: { path: 'categoryId', strictPopulate: false } // Allow WorkCard to show category name
             });
 
         // Sanitize and transform the data

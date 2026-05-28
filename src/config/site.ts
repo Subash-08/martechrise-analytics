@@ -62,7 +62,7 @@ export const siteConfig = {
     name: 'MarTechRise',
     legalName: 'MarTechRise Intelligence Private Limited',
     foundingDate: '2026-01',
-    logo: '/logo.png',
+    logo: '/assets/logo.png',
     description:
       'Analytics tracking and implementation specialists. We design and build ' +
       'server-side tracking infrastructure, GA4 and Adobe Analytics setups, ' +
